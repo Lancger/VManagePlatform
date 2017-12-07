@@ -212,7 +212,21 @@ numprocs=1
 # /usr/local/bin/supervisord -c /etc/supervisord.conf
 # supervisorctl status
 ```
+问题一：
+解决版本：
+ wget ftp://xmlsoft.org/libxml2/libxml2-2.7.2.tar.gz
+ tar xf libxml2-2.7.2.tar.gz
+ cd libxml2-2.7.2
+ ./configure --with-python=~/path/to/python2.7的路径
+ make
+ cd python/
+ python setup.py install
 
+问题二：
+执行echo_supervisord_conf > /etc/supervisord.conf报错 ImportError: No module named _markerlib
+解决办法：
+pip install --upgrade distribute
+easy_install distribute
 
 ## 部分功能截图:
     登录页面
