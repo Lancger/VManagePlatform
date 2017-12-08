@@ -142,11 +142,11 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-     'E:\\MyPros\\VManagePlatform\\VManagePlatform\\static\\',
+      '/opt/apps/VManagePlatform/VManagePlatform/static/',
     )
 TEMPLATE_DIRS = (
 #     os.path.join(BASE_DIR,'mysite\templates'),
-    'E:\\MyPros\\VManagePlatform\\VManagePlatform\\templates\\',
+    '/opt/apps/VManagePlatform/VManagePlatform/templates/',
 )
 
 
