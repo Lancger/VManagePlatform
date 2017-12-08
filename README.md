@@ -223,7 +223,7 @@ numprocs=1
  wget ftp://xmlsoft.org/libxml2/libxml2-2.7.2.tar.gz
  tar xf libxml2-2.7.2.tar.gz
  cd libxml2-2.7.2
- ./configure --with-python=~/path/to/python2.7的路径
+ ./configure
  make
  cd python/
  python setup.py install
