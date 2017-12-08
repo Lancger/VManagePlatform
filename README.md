@@ -168,6 +168,7 @@ TEMPLATE_DIRS = (
 八、生成VManagePlatform数据表
 ```
 # cd /yourpath/VManagePlatform/
+# python manage.py makemigrations
 # python manage.py migrate
 # python manage.py createsuperuser
 ```
@@ -184,7 +185,7 @@ TEMPLATE_DIRS = (
 最后添加
 [program:celery-worker]
 command=/usr/bin/python manage.py celery worker --loglevel=info -E -B  -c 2
-directory=/yourpath/VManagePlatform
+directory=/opt/apps/VManagePlatform/
 stdout_logfile=/var/log/celery-worker.log
 autostart=true
 autorestart=true
@@ -194,7 +195,7 @@ numprocs=1
 
 [program:celery-beat]
 command=/usr/bin/python manage.py celery beat
-directory=/yourpath/VManagePlatform
+directory=/opt/apps/VManagePlatform
 stdout_logfile=/var/log/celery-beat.log
 autostart=true
 autorestart=true
@@ -204,7 +205,7 @@ numprocs=1
 
 [program:celery-cam]
 command=/usr/bin/python manage.py celerycam
-directory=/yourpath/VManagePlatform
+directory=/opt/apps/VManagePlatform
 stdout_logfile=/var/log/celery-celerycam.log
 autostart=true
 autorestart=true
