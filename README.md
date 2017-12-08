@@ -214,7 +214,7 @@ stopsignal=QUIT
 numprocs=1
 
 启动celery
-# /usr/local/bin/supervisord -c /etc/supervisord.conf
+# /opt/.demo/bin/supervisord -c /etc/supervisord.conf
 # supervisorctl status
 ```
 问题一：
