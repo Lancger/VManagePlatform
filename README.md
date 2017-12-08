@@ -127,6 +127,7 @@ mysql> grant all privileges on vmanage.* to 'username'@'%' identified by 'userpa
 mysql>quit
 
 安装配置Redis
+# rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-5.noarch.rpm
 # wget http://download.redis.io/redis-stable.tar.gz
 # tar –zxvf redis-stable.tar.gz
 # cd redis-stable
