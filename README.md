@@ -51,8 +51,11 @@
 
 一、配置需求模块</br>
 ```
-# yum install zlib zlib-devel readline-devel bzip2-devel openssl-devel gdbm-devel libdbi-devel ncurses-libs kernel-devel libxslt-devel libffi-devel python-devel libvirt libvirt-devel
-# pip install -r requirements.txt
+# yum install zlib zlib-devel readline-devel bzip2-devel openssl-devel gdbm-devel libdbi-devel ncurses-libs kernel-devel libxslt-devel libffi-devel python-devel libvirt libvirt-devel gcc git mysql-devel -y
+# mkdir -p /opt/apps/ && cd /opt/apps/
+# git clone https://github.com/welliamcao/VManagePlatform.git
+# cd VManagePlatform
+# pip install -i https://pypi.mirrors.ustc.edu.cn/simple -r requirements.txt
 ```
 二、安装kvm
 ```
