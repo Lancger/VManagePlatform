@@ -184,8 +184,8 @@ TEMPLATE_DIRS = (
 # vim /etc/supervisord.conf
 最后添加
 [program:celery-worker]
-command=/usr/bin/python manage.py celery worker --loglevel=info -E -B  -c 2
-directory=/opt/apps/VManagePlatform/
+command=/opt/.demo/bin/python manage.py celery worker --loglevel=info -E -B  -c 2
+directory=/opt/apps/VManagePlatform
 stdout_logfile=/var/log/celery-worker.log
 autostart=true
 autorestart=true
@@ -194,7 +194,7 @@ stopsignal=QUIT
 numprocs=1
 
 [program:celery-beat]
-command=/usr/bin/python manage.py celery beat
+command=/opt/.demo/bin/python manage.py celery beat
 directory=/opt/apps/VManagePlatform
 stdout_logfile=/var/log/celery-beat.log
 autostart=true
@@ -204,7 +204,7 @@ stopsignal=QUIT
 numprocs=1
 
 [program:celery-cam]
-command=/usr/bin/python manage.py celerycam
+command=/opt/.demo/bin/python manage.py celerycam
 directory=/opt/apps/VManagePlatform
 stdout_logfile=/var/log/celery-celerycam.log
 autostart=true
