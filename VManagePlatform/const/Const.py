@@ -91,7 +91,7 @@ def StorageTypeXMLConfig(pool_type,pool_name,pool_spath=None,pool_tpath=None,poo
         return False
     
 def CreateBridgeNetwork(name,bridgeName,mode): 
-    '''´´½¨ÇÅ½ÓÍøÂç'''
+    '''Â´Â´Â½Â¨Ã‡Ã…Â½Ã“ÃÃ¸Ã‚Ã§'''
     network_xml = '''
             <network>
                   <name>{name}</name>
@@ -103,7 +103,7 @@ def CreateBridgeNetwork(name,bridgeName,mode):
     return network_xml 
     
 def CreateNatNetwork(netName,dhcpIp,dhcpMask,dhcpStart,dhcpEnd): 
-    '''´´½¨natÍøÂç'''
+    '''Â´Â´Â½Â¨natÃÃ¸Ã‚Ã§'''
     network_xml = '''
         <network>
           <name>{netNam}</name>
@@ -213,7 +213,7 @@ def CreateIntanceConfig(dom_name,maxMem,mem,cpu,disk,iso_path,network):
                     <target dev='hda' bus='ide'/>  
                 </disk>  
                 {network}
-                <input type='mouse' bus='ps2'/>  
+                <input type='tablet' bus='usb'/>  
                  <graphics type='vnc' port='-1' autoport='yes' listen = '0.0.0.0' keymap='en-us'/>
                </devices>  
              </domain>        
